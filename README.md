@@ -11,13 +11,14 @@
 
 <a name="Overview"/>
 ## Overview
-The Matrix library defines a *Matrix* object with functions, properties, and capabilities. 
+
+The Matrix library defines a *Matrix* object with functions, properties, and capabilities.
 
 <a name="Documentation"></a>
-## Documentation 
+## Documentation
 
 <a name="Init"></a>
-### *Initialize* 
+### *Initialize*
 __*Matrix*__ (int n, int m, float* xs)
 * int n: integer denoting the Matrix's row count. Raises Exception if &lt;= 0.
 * int m: integer denoting the Matrix's column count. Raises Exception if &lt;= 0.
@@ -28,7 +29,7 @@ __*Matrix*__ (int n, int m, float* xs)
 *example*:
 
 ```c++
-// create a 2x4 matrix 
+// create a 2x4 matrix
 float values[] = {1, 2, 3, 4, 5, 6, 7, 8};
 Matrix A = Matrix(2, 4, values);
 ```
@@ -67,7 +68,7 @@ __*transpose*__ ()
 ```c++
 // create a 2x1 matrix and transpose it
 float values[] = {1, 2};
-/* create a 2x1 matrix 
+/* create a 2x1 matrix
  * A = [1]
  *     [2]
  */
@@ -81,7 +82,7 @@ __*toCharArr*__ ()
 
 *Return*: char * of the matrix values. This is used to display the matrix values as a character array.
 
-*example*: 
+*example*:
 
 ```c++
 float values[] = {1, 2, 3, 4};
@@ -97,9 +98,9 @@ printf(A.toCharArr());
 ### *Operators*
 __*Multiplication*__ *
 
-Performs matrix multiplication between two matrixes. 
+Performs matrix multiplication between two matrixes.
 
-This algorithm uses the naive approach with O(n^3) runtime. 
+This algorithm uses the naive approach with O(n^3) runtime.
 
 Other algorithms that *could have been* used are:
 1. Strassens Algorithm O(n^2.807) - Only faster if n &gt; 100 (not applicable for this use case)
@@ -154,7 +155,7 @@ printf((A == D) ? "true" : "false");
 ### *Build Commands*
 __*Matrix Binary Only*__
 
-The matrix binary can be build alone and imported into another project (if desired) with the following command. Note: this will generate a `Matrix.o` file. 
+The matrix binary can be build alone and imported into another project (if desired) with the following command. Note: this will generate a `Matrix.o` file.
 
 `make Matrix`
 
@@ -166,11 +167,10 @@ The test script has a dependency on the Matrix files (.cpp/.h) and as such will 
 
 <a name="Testing"></a>
 ## Testing
-A test script is provided with the solution. See __*Test Script*__ under __*Build Commands*__ for instructions on building the script. 
+A test script is provided with the solution. See __*Test Script*__ under __*Build Commands*__ for instructions on building the script.
 
-The test script tests the following aspects of the Matrix class: 
+The test script tests the following aspects of the Matrix class:
 1. Matrix Multiplication: 4 tests
 2. Matrix Transformation: 5 tests
 
 The test script will output &quot; __.__ &quot; for every successful test, and a &quot; __F__ &quot; for every test failure.
-
